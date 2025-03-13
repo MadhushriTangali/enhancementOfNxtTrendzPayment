@@ -31,3 +31,8 @@
   font-family: 'Roboto';
   font-size: 30px;
 }
+
+.radio-container {
+  display: flex;
+  flex-direction: column;
+}

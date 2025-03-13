@@ -30,9 +30,8 @@ class App extends Component {
         cartList: prevState.cartList.map(each => {
           if (each.id === product.id) {
             return {...each, quantity: each.quantity + product.quantity}
-          } else {
-            return each
           }
+          return each
         }),
       }))
     }

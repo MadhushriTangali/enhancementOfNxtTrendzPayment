@@ -1,0 +1,27 @@
+.order-placed-heading {
+  color: green;
+  font-size: 32px;
+  font-family: 'Roboto';
+}
+
+.payment-li-container {
+  display: flex;
+}
+
+.payment-ul-container {
+  list-style-type: none;
+}
+
+.display-text {
+  color: #454343;
+  font-size: 24px;
+  font-family: 'Roboto';
+}
+
+.confirm-button {
+  background-color: green;
+  color: #ffffff;
+  font-size: 24px;
+  font-family: 'Roboto';
+  border: 0px;
+}

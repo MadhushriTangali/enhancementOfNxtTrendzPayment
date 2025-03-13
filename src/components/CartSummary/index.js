@@ -1,4 +1,6 @@
+import Popup from 'reactjs-popup'
 import CartContext from '../../context/CartContext'
+import PopupElement from '../PopupElement'
 import './index.css'
 
 const CartSummary = () => (
@@ -8,7 +10,7 @@ const CartSummary = () => (
 
       let totalprice = 0
       cartList.forEach(each => {
-        totalprice += each.price*each.quantity
+        totalprice += each.price * each.quantity
       })
 
       return (
@@ -17,9 +19,17 @@ const CartSummary = () => (
             Order Total: <span className="total-price">Rs {totalprice}/-</span>
           </h1>
           <p className="item-length">{cartList.length} items in cart</p>
-          <button type="button" className="checkout-button">
-            Checkout
-          </button>
+          <Popup
+            trigger={
+              <button type="button" className="checkout-button">
+                Checkout
+              </button>
+            }
+            modal
+            position="top left"
+          >
+            {close => <PopupElement close={close} />}
+          </Popup>
         </div>
       )
     }}
